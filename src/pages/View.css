@@ -1,0 +1,32 @@
+.card{
+    width: 400px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+   align-content: center;
+   margin: 0 auto;
+
+}
+
+.card-header{
+    background-color: rgb(109, 109, 109);
+    color: white;
+text-align: center;
+height: 30%;
+margin-bottom: 20px;
+}
+
+.container{
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 4px 16px;
+    
+}
+.container span{
+    font-weight: normal;
+    margin-left: 2rem;
+}
+
+.btn-edit{
+    padding: 10px 50px;
+}
