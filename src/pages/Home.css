@@ -1,68 +1,127 @@
-.styled-table{
-     border-collapse: collapse;
-     margin: auto;
-     font-size: 0.9em;
-     font-family: sans-serif;
-     max-width: 800px;
-     box-shadow: 0 0 20px rgba(0,0,0,0.15) ;
+.child{
+    max-width: 100%;
+    margin: auto;
 }
-
-.styled-table thead tr{
-    background-color: #009879;
+.parent{
+max-width: 900px;
+max-height: 400px;
+overflow-y: auto;
+margin: auto;
+box-shadow:1px 1px 2.2px rgba(0, 0, 0, 0.6);
+/* border-radius: 20px 20px 0 0 !important; */
+}
+thead{
+    background-color: rgb(12, 137, 175);
     color: white;
-    text-align: left;
+    position: sticky;
+    top: 0;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 0 2.5rem ;
+  padding: 2rem 0;
+  
+}
+.top h1{
+  font-size: 15px;
+}
+.statusSection{
+  display: flex;
+  flex-wrap: nowrap;
+}
+tr:last-child{
+    border-bottom: rgb(13, 128, 13);
+    width: 3px;
+}
+td{
+    min-width: 150px;
+}
+td:last-child{
+    min-width: 200px;
 }
 
-.styled-table th, .styled-table td{
-    padding: 12px 15PX;
+/* Scrollbar Styling */
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
 }
 
-.styled-table tbody tr{
-    border-bottom:  1px soli white;
-}
-.styled-table tbody tr:nth-of-type(even){
-    background-color: rgb(192, 216, 236);
-}
-.styled-table tbody tr:last-of-type{
-    border-bottom: 2px solid #009879;
-}
-.btn{
-    border: none;
-    color: white;
-    padding: 8px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-.btn-edit{
-    background-color: #008cba;
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(12, 137, 175);
+  border-radius: 5px;
 }
 
-.btn-delete{
-    background-color: rgb(219, 27, 27);
-}
-.btn-view{
-    background-color: rgb(233, 230, 230);
-    color: black;
+/* Customize the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
+/* Customize the scrollbar corner */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+/* Hide the scrollbar when not interacting */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* Show the scrollbar on hover */
+body:hover {
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* Adjust the scrollbar width and height */
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Adjust the scrollbar corner size */
+body::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+  display: none;
+}
+
+
+/* New CSS */
+
+.sorting{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
 .dropdown{
-    width: 20%;
-    margin: 5px;
+   width: 200px;
+   padding: 6px;
 }
-.btn-reset{
-    background-color: darkorchid;
-    color: white;
+
+@media screen and (max-width:900px) {
+  .top{
+    width: 90%;
+  }
 }
-.btn-active{
-    background-color: rgb(43, 180, 8);
-    color: white;
+@media screen and (max-width:600px) {
+  .top{
+    padding: 2.5rem 15px;
+    width: 100%;
+  }
 }
-.btn-inactive{
-    background-color: rgb(111, 112, 111);
-    color: white;
+@media screen and (max-width:400px) {
+  .top{
+    padding: 2.5rem 15px;
+    width: 100%;
+  }
+  .dropdown{
+    width: 120px;
+ }
 }

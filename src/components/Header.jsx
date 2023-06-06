@@ -26,7 +26,12 @@ function Header() {
 
   return (
     <div className="header">
-<p className="logo textDecoration-none text-primary"><Link to="/" className=" textDecoration-none">Contact App</Link></p>
+      <Link className="Linkdeco" to="/">
+        <h1 className="h1title text-warning" onClick={() => setActiveTab("Home")}>
+          React firebase CRUD
+        </h1>
+      </Link>
+
       <div className="header-right">
         <form onSubmit={handleSearchSubmit}>
           <input
@@ -50,10 +55,10 @@ function Header() {
             className={`${activeTab === "AddContact" ? "active" : ""}`}
             onClick={() => setActiveTab("AddContact")}
           >
-            Add Contact
+            ADD+
           </p>
         </Link>
-        <Link to="/about">
+        <Link className="about" to="/about">
           <p
             className={`${activeTab === "About" ? "active" : ""}`}
             onClick={() => setActiveTab("About")}

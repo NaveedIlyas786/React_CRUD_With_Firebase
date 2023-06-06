@@ -83,7 +83,8 @@ function AddUser() {
   };
 
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div style={{ marginTop: "10px" }}>
+      <h1 className="text-warning">{id?"Update":"Add User"}</h1>
       <form
         style={{
           margin: "auto",
@@ -132,7 +133,7 @@ function AddUser() {
           onChange={handleInputChange}
         />
 
-        <input type="submit" value={id ?"Update":"Add User"} />
+        <input type="submit" className="bg-primary" value={id ?"Update":"Add User"} />
       </form>
     </div>
   );
