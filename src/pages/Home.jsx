@@ -133,7 +133,7 @@ function Home() {
               <th style={{ textAlign: "center" }}>Email</th>
               <th style={{ textAlign: "center" }}>Contact</th>
               <th style={{ textAlign: "center" }}>Status</th>
-              <th style={{ textAlign: "center" }}>Actions</th>
+              {!sort ? <th style={{ textAlign: "center" }}>Actions</th>:""}
             </tr>
           </thead>
           {/* //! Body Section */}
@@ -193,22 +193,7 @@ function Home() {
                         <td>{item.email}</td>
                         <td>{item.contact}</td>
                         <td>{item.status}</td>
-                        <td>
-                          //! In case of sorting these actions are not working;
-                          fix it later
-                          <Link className="btn btn-view" to={`/view/${index}`}>
-                            View
-                          </Link>
-                          <Link to={`/update/${index}`}>
-                            <button className="btn btn-edit">Edit</button>
-                          </Link>
-                          <button
-                            className="btn btn-delete"
-                            onClick={() => onDelete(index)}
-                          >
-                            Delete
-                          </button>
-                        </td>
+                       
                       </tr>
                     );
                   })}
