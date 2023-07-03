@@ -166,13 +166,13 @@ function Home() {
                         <td>{data[id].status}</td>
                         <td>
                           <Link to={`/view/${id}`}>
-                            <button className="btn btn-view">View</button>
+                            <button className="btn btn-secondary">View</button>
                           </Link>
                           <Link to={`/update/${id}`}>
                             <button className="btn btn-warning">Edit</button>
                           </Link>
                           <button
-                            className="btn btn-delete"
+                            className="btn btn-danger"
                             onClick={() => onDelete(id)}
                           >
                             Delete
